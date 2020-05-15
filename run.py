@@ -27,4 +27,6 @@ model.compile(loss="sparse_categorical_crossentropy",
 
 model_history = model.fit(x_train, y_train, epochs=20, validation_data=(x_valid, y_valid))
 
-model.evaluate(x_test, y_test)
+result = model.evaluate(x_test, y_test)
+print('Test loss:', result[0])
+print('Test accuracy:', result[1])
